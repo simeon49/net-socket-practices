@@ -1,0 +1,398 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+FileList_Add	FileList.c	/^int FileList_Add(struct file_info *file_list, int num, char file_name[], long pkgnum, long size, long ltime, int s_addr)$/;"	f
+FileList_Create	FileList.c	/^int	FileList_Create(struct file_info *file_list)$/;"	f
+FileList_Find	FileList.c	/^int FileList_Find(struct file_info *file_list, int s_addr)$/;"	f
+FileList_FreeList	FileList.c	/^void FileList_FreeList(struct file_info *file_list)$/;"	f
+FileList_GetUserAddr	FileList.c	/^int FileList_GetUserAddr(struct file_info *file_list, int num, int *s_addr)$/;"	f
+FileList_List	FileList.c	/^void FileList_List(struct file_info *file_list)$/;"	f
+FileList_VolumeIncrease	FileList.c	/^int FileList_VolumeIncrease(struct file_info *file_list)$/;"	f
+FILELIST_H	FileList.h	14;"	d
+FILE_LIST_INCREASE	FileList.h	33;"	d
+f_array	FileList.h	/^	struct file_array	*f_array;		\/\/指向用户列表（动态数组 malloc realloc 实现）$/;"	m	struct:file_info	typeref:struct:file_info::file_array
+f_count	FileList.h	/^	int					f_count;		\/\/实际用户数量 (该值 <= 用户列表容量)$/;"	m	struct:file_info
+f_volume	FileList.h	/^	int					f_volume;		\/\/用户列表容量（file_list_INCREASE 的倍数）$/;"	m	struct:file_info
+file_array	FileList.h	/^struct file_array$/;"	s
+file_info	FileList.h	/^struct file_info{$/;"	s
+ltime	FileList.h	/^	long			ltime;				\/\/最后修改时间$/;"	m	struct:file_array
+name	FileList.h	/^	char			name[50];			\/\/文件名$/;"	m	struct:file_array
+next	FileList.h	/^	struct filelist *next;$/;"	m	struct:file_array	typeref:struct:file_array::filelist
+num	FileList.h	/^	int 			num;				\/\/文件序号$/;"	m	struct:file_array
+pkgnum	FileList.h	/^	long			pkgnum;				\/\/包编号$/;"	m	struct:file_array
+s_addr	FileList.h	/^	int				s_addr;				\/\/发送者IP(网络字节序)$/;"	m	struct:file_array
+size	FileList.h	/^	long			size;				\/\/文件大小$/;"	m	struct:file_array
+CMD_receive	IPMSG.c	/^struct CMD_receive{$/;"	s	file:
+CMD_user_input	IPMSG.c	/^struct CMD_user_input{$/;"	s	file:
+IPMSG_ClearScreen	IPMSG.c	/^int IPMSG_ClearScreen(char buf[])$/;"	f
+IPMSG_DirList	IPMSG.c	/^int IPMSG_DirList(char buf[])$/;"	f
+IPMSG_DownFile	IPMSG.c	/^int IPMSG_DownFile(char *arg)$/;"	f
+IPMSG_FileList	IPMSG.c	/^int IPMSG_FileList(char buf[])$/;"	f
+IPMSG_GetAMsg	IPMSG.c	/^int IPMSG_GetAMsg(unsigned int s_addr, char *argv[])$/;"	f
+IPMSG_GetUserInputOnce	IPMSG.c	/^int IPMSG_GetUserInputOnce(void)$/;"	f
+IPMSG_Help	IPMSG.c	/^int IPMSG_Help(char buf[])$/;"	f
+IPMSG_Quit	IPMSG.c	/^int IPMSG_Quit(char buf[])$/;"	f
+IPMSG_ReceiveUdpMSGOnce	IPMSG.c	/^int IPMSG_ReceiveUdpMSGOnce(void)$/;"	f
+IPMSG_ServerProcess	IPMSG.c	/^void *IPMSG_ServerProcess(void *arg)$/;"	f
+IPMSG_Start	IPMSG.c	/^int IPMSG_Start(char user[], char host[], int pic)$/;"	f
+IPMSG_TCP_GetFile	IPMSG.c	/^int IPMSG_TCP_GetFile(char buf[])$/;"	f
+IPMSG_TCP_Server	IPMSG.c	/^void *IPMSG_TCP_Server(void *arg)$/;"	f
+IPMSG_UDP_Send	IPMSG.c	/^int IPMSG_UDP_Send(int who, unsigned long cmd, char buf[], int buf_len)$/;"	f
+IPMSG_UDP_SendFile	IPMSG.c	/^int IPMSG_UDP_SendFile(char buf[])$/;"	f
+IPMSG_UDP_Send_Str	IPMSG.c	/^int IPMSG_UDP_Send_Str(char buf[])$/;"	f
+IPMSG_UserAdd	IPMSG.c	/^int IPMSG_UserAdd(unsigned int s_addr, char *argv[])$/;"	f
+IPMSG_UserDel	IPMSG.c	/^int IPMSG_UserDel(unsigned int s_addr, char *argv[])$/;"	f
+IPMSG_UserList	IPMSG.c	/^int IPMSG_UserList(char buf[])$/;"	f
+IPMSG_UserState	IPMSG.c	/^int IPMSG_UserState(char buf[])$/;"	f
+cmd	IPMSG.c	/^	char		cmd[20];$/;"	m	struct:CMD_user_input	file:
+cmd	IPMSG.c	/^	unsigned long	cmd;$/;"	m	struct:CMD_receive	file:
+cmd_list	IPMSG.c	/^struct CMD_receive cmd_list[] = {$/;"	v	typeref:struct:CMD_receive
+cmd_list2	IPMSG.c	/^struct CMD_user_input cmd_list2[] = {$/;"	v	typeref:struct:CMD_user_input
+file_list	IPMSG.c	/^struct file_info 	file_list;			\/\/用于存放可下载文件信息(文件名、文件序号、包编号、文件大小、最后修改时间、发送者IP（32位网络字节序）)$/;"	v	typeref:struct:file_info
+fun	IPMSG.c	/^	int	(* fun)(char buf[]);$/;"	m	struct:CMD_user_input	file:
+fun	IPMSG.c	/^	int	(* fun)(unsigned int s_addr, char *argv[]);$/;"	m	struct:CMD_receive	file:
+host_name	IPMSG.c	/^char				host_name[20];		\/\/本机主机名$/;"	v
+server_file_list	IPMSG.c	/^struct file_info 	server_file_list;	\/\/用于存放可被下载文件信息(文件名、文件序号、包编号、文件大小、最后修改时间、发送者IP（32位网络字节序）)$/;"	v	typeref:struct:file_info
+udp_sockfd	IPMSG.c	/^int					udp_sockfd;			\/\/UDP socket$/;"	v
+user_list	IPMSG.c	/^struct user_info 	user_list;			\/\/用于存放在线用户信息(用户名、主机名、IP（32位网络字节序）)$/;"	v	typeref:struct:user_info
+user_name	IPMSG.c	/^char				user_name[20];		\/\/本机用户名$/;"	v
+user_pic	IPMSG.c	/^int					user_pic = 0;		\/\/用户头像$/;"	v
+user_state	IPMSG.c	/^int					user_state = 1;		\/\/用户状态 1显示在线 2显示下线$/;"	v
+IPMSG_H	IPMSG.h	11;"	d
+FILELIST_SEPARATOR	IPMSG_D.h	135;"	d
+GET_MODE	IPMSG_D.h	18;"	d
+GET_OPT	IPMSG_D.h	19;"	d
+HOSTLIST_DUMMY	IPMSG_D.h	137;"	d
+HOSTLIST_SEPARATOR	IPMSG_D.h	136;"	d
+IPMSG_ABSENCEOPT	IPMSG_D.h	59;"	d
+IPMSG_ALLREVSORTOPT	IPMSG_D.h	166;"	d
+IPMSG_ANSENTRY	IPMSG_D.h	30;"	d
+IPMSG_ANSLIST	IPMSG_D.h	36;"	d
+IPMSG_ANSPUBKEY	IPMSG_D.h	56;"	d
+IPMSG_ANSREADMSG	IPMSG_D.h	43;"	d
+IPMSG_ANS_TIMER	IPMSG_D.h	155;"	d
+IPMSG_AUTORETOPT	IPMSG_D.h	71;"	d
+IPMSG_BLOWFISH_128	IPMSG_D.h	87;"	d
+IPMSG_BLOWFISH_128ALL	IPMSG_D.h	97;"	d
+IPMSG_BLOWFISH_128OLD	IPMSG_D.h	94;"	d
+IPMSG_BLOWFISH_256	IPMSG_D.h	88;"	d
+IPMSG_BROADCASTOPT	IPMSG_D.h	68;"	d
+IPMSG_BROADCAST_TIMER	IPMSG_D.h	148;"	d
+IPMSG_BR_ABSENCE	IPMSG_D.h	31;"	d
+IPMSG_BR_ENTRY	IPMSG_D.h	28;"	d
+IPMSG_BR_EXIT	IPMSG_D.h	29;"	d
+IPMSG_BR_ISGETLIST	IPMSG_D.h	33;"	d
+IPMSG_BR_ISGETLIST2	IPMSG_D.h	37;"	d
+IPMSG_DEFAULT_PORT	IPMSG_D.h	23;"	d
+IPMSG_DELMSG	IPMSG_D.h	42;"	d
+IPMSG_DIALUPOPT	IPMSG_D.h	61;"	d
+IPMSG_DUMMY_TIMER	IPMSG_D.h	153;"	d
+IPMSG_ENCRYPTOPT	IPMSG_D.h	63;"	d
+IPMSG_ENTRYMINSEC	IPMSG_D.h	145;"	d
+IPMSG_ENTRY_TIMER	IPMSG_D.h	152;"	d
+IPMSG_FILEATTACHOPT	IPMSG_D.h	62;"	d
+IPMSG_FILE_ACL	IPMSG_D.h	131;"	d
+IPMSG_FILE_ALIASFNAME	IPMSG_D.h	132;"	d
+IPMSG_FILE_ARCHIVEOPT	IPMSG_D.h	113;"	d
+IPMSG_FILE_ATIME	IPMSG_D.h	126;"	d
+IPMSG_FILE_BDEV	IPMSG_D.h	105;"	d
+IPMSG_FILE_CDEV	IPMSG_D.h	104;"	d
+IPMSG_FILE_CREATETIME	IPMSG_D.h	127;"	d
+IPMSG_FILE_CREATOR	IPMSG_D.h	128;"	d
+IPMSG_FILE_CTIME	IPMSG_D.h	124;"	d
+IPMSG_FILE_DIR	IPMSG_D.h	101;"	d
+IPMSG_FILE_EXHIDDENOPT	IPMSG_D.h	112;"	d
+IPMSG_FILE_FIFO	IPMSG_D.h	106;"	d
+IPMSG_FILE_FILETYPE	IPMSG_D.h	129;"	d
+IPMSG_FILE_FINDERINFO	IPMSG_D.h	130;"	d
+IPMSG_FILE_GID	IPMSG_D.h	119;"	d
+IPMSG_FILE_GROUPNAME	IPMSG_D.h	120;"	d
+IPMSG_FILE_HIDDENOPT	IPMSG_D.h	111;"	d
+IPMSG_FILE_MAJORNO	IPMSG_D.h	122;"	d
+IPMSG_FILE_MINORNO	IPMSG_D.h	123;"	d
+IPMSG_FILE_MTIME	IPMSG_D.h	125;"	d
+IPMSG_FILE_PERM	IPMSG_D.h	121;"	d
+IPMSG_FILE_REGULAR	IPMSG_D.h	100;"	d
+IPMSG_FILE_RESFORK	IPMSG_D.h	107;"	d
+IPMSG_FILE_RETPARENT	IPMSG_D.h	102;"	d
+IPMSG_FILE_RONLYOPT	IPMSG_D.h	110;"	d
+IPMSG_FILE_SYMLINK	IPMSG_D.h	103;"	d
+IPMSG_FILE_SYSTEMOPT	IPMSG_D.h	114;"	d
+IPMSG_FILE_UID	IPMSG_D.h	117;"	d
+IPMSG_FILE_UNICODEFNAME	IPMSG_D.h	133;"	d
+IPMSG_FILE_USERNAME	IPMSG_D.h	118;"	d
+IPMSG_FULLNAME	IPMSG_D.h	158;"	d
+IPMSG_GETABSENCEINFO	IPMSG_D.h	48;"	d
+IPMSG_GETDIRFILES	IPMSG_D.h	53;"	d
+IPMSG_GETFILEDATA	IPMSG_D.h	51;"	d
+IPMSG_GETINFO	IPMSG_D.h	45;"	d
+IPMSG_GETLIST	IPMSG_D.h	35;"	d
+IPMSG_GETLIST_FINISH	IPMSG_D.h	146;"	d
+IPMSG_GETPUBKEY	IPMSG_D.h	55;"	d
+IPMSG_GROUPREVSORTOPT	IPMSG_D.h	167;"	d
+IPMSG_H	IPMSG_D.h	12;"	d
+IPMSG_HOSTSORT	IPMSG_D.h	162;"	d
+IPMSG_ICMPSORTOPT	IPMSG_D.h	164;"	d
+IPMSG_IPADDRSORT	IPMSG_D.h	161;"	d
+IPMSG_LISTGETRETRY_TIMER	IPMSG_D.h	151;"	d
+IPMSG_LISTGET_TIMER	IPMSG_D.h	150;"	d
+IPMSG_MULTICASTOPT	IPMSG_D.h	69;"	d
+IPMSG_NAMESORT	IPMSG_D.h	160;"	d
+IPMSG_NEWMUTIOPT	IPMSG_D.h	75;"	d
+IPMSG_NICKNAME	IPMSG_D.h	157;"	d
+IPMSG_NOADDLISTOPT	IPMSG_D.h	76;"	d
+IPMSG_NOGROUPSORTOPT	IPMSG_D.h	163;"	d
+IPMSG_NOKANJISORTOPT	IPMSG_D.h	165;"	d
+IPMSG_NOLOGOPT	IPMSG_D.h	74;"	d
+IPMSG_NOOPERATION	IPMSG_D.h	26;"	d
+IPMSG_NOPOPUPOPT	IPMSG_D.h	70;"	d
+IPMSG_OKGETLIST	IPMSG_D.h	34;"	d
+IPMSG_PASSWORDOPT	IPMSG_D.h	73;"	d
+IPMSG_RC2_128	IPMSG_D.h	85;"	d
+IPMSG_RC2_128ALL	IPMSG_D.h	96;"	d
+IPMSG_RC2_128OLD	IPMSG_D.h	93;"	d
+IPMSG_RC2_256	IPMSG_D.h	86;"	d
+IPMSG_RC2_40	IPMSG_D.h	84;"	d
+IPMSG_RC2_40ALL	IPMSG_D.h	95;"	d
+IPMSG_RC2_40OLD	IPMSG_D.h	92;"	d
+IPMSG_READCHECKOPT	IPMSG_D.h	77;"	d
+IPMSG_READMSG	IPMSG_D.h	41;"	d
+IPMSG_RECVMSG	IPMSG_D.h	40;"	d
+IPMSG_RECV_TIMER	IPMSG_D.h	154;"	d
+IPMSG_RELEASEFILES	IPMSG_D.h	52;"	d
+IPMSG_RETRYOPT	IPMSG_D.h	72;"	d
+IPMSG_REVERSEICON	IPMSG_D.h	143;"	d
+IPMSG_RSA_1024	IPMSG_D.h	82;"	d
+IPMSG_RSA_2048	IPMSG_D.h	83;"	d
+IPMSG_RSA_512	IPMSG_D.h	81;"	d
+IPMSG_SECRETEXOPT	IPMSG_D.h	78;"	d
+IPMSG_SECRETOPT	IPMSG_D.h	67;"	d
+IPMSG_SENDABSENCEINFO	IPMSG_D.h	49;"	d
+IPMSG_SENDCHECKOPT	IPMSG_D.h	66;"	d
+IPMSG_SENDINFO	IPMSG_D.h	46;"	d
+IPMSG_SENDMSG	IPMSG_D.h	39;"	d
+IPMSG_SEND_TIMER	IPMSG_D.h	149;"	d
+IPMSG_SERVEROPT	IPMSG_D.h	60;"	d
+IPMSG_SIGN_MD5	IPMSG_D.h	89;"	d
+IPMSG_SUBREVSORTOPT	IPMSG_D.h	168;"	d
+IPMSG_TIMERINTERVAL	IPMSG_D.h	144;"	d
+IPMSG_VERSION	IPMSG_D.h	22;"	d
+CC	Makefile	/^CC = gcc$/;"	m
+UserLiset_FreeList	UserList.c	/^void UserLiset_FreeList(struct user_info *user_list)$/;"	f
+UserLiset_VolumeIncrease	UserList.c	/^int UserLiset_VolumeIncrease(struct user_info *user_list)$/;"	f
+UserList_Add	UserList.c	/^int UserList_Add(struct user_info *user_list, char name[], char host[], int	s_addr)$/;"	f
+UserList_Create	UserList.c	/^int	UserList_Create(struct user_info *user_list)$/;"	f
+UserList_Del	UserList.c	/^int UserList_Del(struct user_info *user_list, int who)$/;"	f
+UserList_Find	UserList.c	/^int UserList_Find(struct user_info *user_list, int mode, void *args)$/;"	f
+UserList_GetUserAddr	UserList.c	/^int UserList_GetUserAddr(struct user_info *user_list, int who, int *s_addr)$/;"	f
+UserList_Ls	UserList.c	/^void UserList_Ls(struct user_info *user_list)$/;"	f
+UserList_UserInfoRewrite	UserList.c	/^int UserList_UserInfoRewrite(struct user_info *user_list, int who, char name[], char host[], int s_addr)$/;"	f
+TO_EVERONE	UserList.h	98;"	d
+USERLIST_F_ADDR	UserList.h	89;"	d
+USERLIST_F_HOST	UserList.h	88;"	d
+USERLIST_F_NAME	UserList.h	87;"	d
+USERLIST_H	UserList.h	19;"	d
+USER_LIST_INCREASE	UserList.h	38;"	d
+host	UserList.h	/^	char				host[20];		\/\/主机名$/;"	m	struct:user_array
+name	UserList.h	/^	char				name[20];		\/\/用户名$/;"	m	struct:user_array
+s_addr	UserList.h	/^	int					s_addr;			\/\/IP地址（32位网路字节序）$/;"	m	struct:user_array
+u_array	UserList.h	/^	struct user_array	*u_array;		\/\/指向用户列表（动态数组 malloc realloc 实现）$/;"	m	struct:user_info	typeref:struct:user_info::user_array
+u_count	UserList.h	/^	int					u_count;		\/\/实际用户数量 (该值 <= 用户列表容量)$/;"	m	struct:user_info
+u_volume	UserList.h	/^	int					u_volume;		\/\/用户列表容量（USER_LIST_INCREASE 的倍数）$/;"	m	struct:user_info
+user_array	UserList.h	/^struct user_array{$/;"	s
+user_info	UserList.h	/^struct user_info{$/;"	s
+CC	demo/Makefile	/^CC=gcc$/;"	m
+CFLAGS	demo/Makefile	/^CFLAGS=-Wall -O0 $/;"	m
+execfile	demo/Makefile	/^execfile=ipmsg$/;"	m
+obj	demo/Makefile	/^obj=main.o user_manager.o communication.o user_interface.o file_manager.o$/;"	m
+broad_cast_online_info	demo/communication.c	/^void broad_cast_online_info(void)$/;"	f
+create_server	demo/communication.c	/^void create_server()$/;"	f
+host	demo/communication.c	/^char *host(void)$/;"	f
+host_name	demo/communication.c	/^static char host_name[30] = "";$/;"	v	file:
+ipmsg_exit	demo/communication.c	/^void ipmsg_exit(void)$/;"	f
+msg_send	demo/communication.c	/^void msg_send(char *msg, int len,  struct sockaddr_in addr)$/;"	f
+online	demo/communication.c	/^void online(char *user, char *host)$/;"	f
+recv_msg_thread	demo/communication.c	/^void *recv_msg_thread(void *arg)$/;"	f
+recvfile	demo/communication.c	/^int recvfile(int id)$/;"	f
+sendfile_thread	demo/communication.c	/^void *sendfile_thread(void *arg)$/;"	f
+tcp_fd	demo/communication.c	/^int tcp_fd(void)$/;"	f
+tcpfd	demo/communication.c	/^static int tcpfd = 0;$/;"	v	file:
+udp_fd	demo/communication.c	/^int udp_fd(void)$/;"	f
+udpfd	demo/communication.c	/^static int udpfd = 0;$/;"	v	file:
+user	demo/communication.c	/^char *user(void)$/;"	f
+user_name	demo/communication.c	/^static char user_name[20] = "";$/;"	v	file:
+PORT	demo/communication.h	15;"	d
+_COMMUNICATION_H_	demo/communication.h	12;"	d
+add_file	demo/file_manager.c	/^void add_file(IPMSG_FILE temp, int flag)$/;"	f
+del_file	demo/file_manager.c	/^void del_file(IPMSG_FILE *temp, int flag)$/;"	f
+file_list	demo/file_manager.c	/^void file_list(void)$/;"	f
+find_file	demo/file_manager.c	/^IPMSG_FILE * find_file(int id)$/;"	f
+getfileinfo	demo/file_manager.c	/^IPMSG_FILE *getfileinfo(long pkgnum, int filenum)$/;"	f
+getfileopt	demo/file_manager.c	/^int getfileopt(char *fileopt, char *filename, long pkgnum, int num)$/;"	f
+recvhead	demo/file_manager.c	/^static IPMSG_FILE *recvhead = NULL; \/\/��������$/;"	v	file:
+sendhead	demo/file_manager.c	/^static IPMSG_FILE *sendhead = NULL;	\/\/��������$/;"	v	file:
+IPMSG_FILE	demo/file_manager.h	/^}IPMSG_FILE;$/;"	t	typeref:struct:filelist
+RECVFILE	demo/file_manager.h	15;"	d
+SENDFILE	demo/file_manager.h	14;"	d
+_FILE_H_	demo/file_manager.h	12;"	d
+filelist	demo/file_manager.h	/^typedef struct filelist$/;"	s
+ltime	demo/file_manager.h	/^	long ltime;$/;"	m	struct:filelist
+name	demo/file_manager.h	/^	char name[50];$/;"	m	struct:filelist
+next	demo/file_manager.h	/^	struct filelist *next;$/;"	m	struct:filelist	typeref:struct:filelist::filelist
+num	demo/file_manager.h	/^	int num;$/;"	m	struct:filelist
+pkgnum	demo/file_manager.h	/^	long pkgnum;$/;"	m	struct:filelist
+size	demo/file_manager.h	/^	long size;$/;"	m	struct:filelist
+user	demo/file_manager.h	/^	char user[10];	$/;"	m	struct:filelist
+FILELIST_SEPARATOR	demo/ipmsg.h	135;"	d
+GET_MODE	demo/ipmsg.h	18;"	d
+GET_OPT	demo/ipmsg.h	19;"	d
+HOSTLIST_DUMMY	demo/ipmsg.h	137;"	d
+HOSTLIST_SEPARATOR	demo/ipmsg.h	136;"	d
+IPMSG_ABSENCEOPT	demo/ipmsg.h	59;"	d
+IPMSG_ALLREVSORTOPT	demo/ipmsg.h	166;"	d
+IPMSG_ANSENTRY	demo/ipmsg.h	30;"	d
+IPMSG_ANSLIST	demo/ipmsg.h	36;"	d
+IPMSG_ANSPUBKEY	demo/ipmsg.h	56;"	d
+IPMSG_ANSREADMSG	demo/ipmsg.h	43;"	d
+IPMSG_ANS_TIMER	demo/ipmsg.h	155;"	d
+IPMSG_AUTORETOPT	demo/ipmsg.h	71;"	d
+IPMSG_BLOWFISH_128	demo/ipmsg.h	87;"	d
+IPMSG_BLOWFISH_128ALL	demo/ipmsg.h	97;"	d
+IPMSG_BLOWFISH_128OLD	demo/ipmsg.h	94;"	d
+IPMSG_BLOWFISH_256	demo/ipmsg.h	88;"	d
+IPMSG_BROADCASTOPT	demo/ipmsg.h	68;"	d
+IPMSG_BROADCAST_TIMER	demo/ipmsg.h	148;"	d
+IPMSG_BR_ABSENCE	demo/ipmsg.h	31;"	d
+IPMSG_BR_ENTRY	demo/ipmsg.h	28;"	d
+IPMSG_BR_EXIT	demo/ipmsg.h	29;"	d
+IPMSG_BR_ISGETLIST	demo/ipmsg.h	33;"	d
+IPMSG_BR_ISGETLIST2	demo/ipmsg.h	37;"	d
+IPMSG_DEFAULT_PORT	demo/ipmsg.h	23;"	d
+IPMSG_DELMSG	demo/ipmsg.h	42;"	d
+IPMSG_DIALUPOPT	demo/ipmsg.h	61;"	d
+IPMSG_DUMMY_TIMER	demo/ipmsg.h	153;"	d
+IPMSG_ENCRYPTOPT	demo/ipmsg.h	63;"	d
+IPMSG_ENTRYMINSEC	demo/ipmsg.h	145;"	d
+IPMSG_ENTRY_TIMER	demo/ipmsg.h	152;"	d
+IPMSG_FILEATTACHOPT	demo/ipmsg.h	62;"	d
+IPMSG_FILE_ACL	demo/ipmsg.h	131;"	d
+IPMSG_FILE_ALIASFNAME	demo/ipmsg.h	132;"	d
+IPMSG_FILE_ARCHIVEOPT	demo/ipmsg.h	113;"	d
+IPMSG_FILE_ATIME	demo/ipmsg.h	126;"	d
+IPMSG_FILE_BDEV	demo/ipmsg.h	105;"	d
+IPMSG_FILE_CDEV	demo/ipmsg.h	104;"	d
+IPMSG_FILE_CREATETIME	demo/ipmsg.h	127;"	d
+IPMSG_FILE_CREATOR	demo/ipmsg.h	128;"	d
+IPMSG_FILE_CTIME	demo/ipmsg.h	124;"	d
+IPMSG_FILE_DIR	demo/ipmsg.h	101;"	d
+IPMSG_FILE_EXHIDDENOPT	demo/ipmsg.h	112;"	d
+IPMSG_FILE_FIFO	demo/ipmsg.h	106;"	d
+IPMSG_FILE_FILETYPE	demo/ipmsg.h	129;"	d
+IPMSG_FILE_FINDERINFO	demo/ipmsg.h	130;"	d
+IPMSG_FILE_GID	demo/ipmsg.h	119;"	d
+IPMSG_FILE_GROUPNAME	demo/ipmsg.h	120;"	d
+IPMSG_FILE_HIDDENOPT	demo/ipmsg.h	111;"	d
+IPMSG_FILE_MAJORNO	demo/ipmsg.h	122;"	d
+IPMSG_FILE_MINORNO	demo/ipmsg.h	123;"	d
+IPMSG_FILE_MTIME	demo/ipmsg.h	125;"	d
+IPMSG_FILE_PERM	demo/ipmsg.h	121;"	d
+IPMSG_FILE_REGULAR	demo/ipmsg.h	100;"	d
+IPMSG_FILE_RESFORK	demo/ipmsg.h	107;"	d
+IPMSG_FILE_RETPARENT	demo/ipmsg.h	102;"	d
+IPMSG_FILE_RONLYOPT	demo/ipmsg.h	110;"	d
+IPMSG_FILE_SYMLINK	demo/ipmsg.h	103;"	d
+IPMSG_FILE_SYSTEMOPT	demo/ipmsg.h	114;"	d
+IPMSG_FILE_UID	demo/ipmsg.h	117;"	d
+IPMSG_FILE_UNICODEFNAME	demo/ipmsg.h	133;"	d
+IPMSG_FILE_USERNAME	demo/ipmsg.h	118;"	d
+IPMSG_FULLNAME	demo/ipmsg.h	158;"	d
+IPMSG_GETABSENCEINFO	demo/ipmsg.h	48;"	d
+IPMSG_GETDIRFILES	demo/ipmsg.h	53;"	d
+IPMSG_GETFILEDATA	demo/ipmsg.h	51;"	d
+IPMSG_GETINFO	demo/ipmsg.h	45;"	d
+IPMSG_GETLIST	demo/ipmsg.h	35;"	d
+IPMSG_GETLIST_FINISH	demo/ipmsg.h	146;"	d
+IPMSG_GETPUBKEY	demo/ipmsg.h	55;"	d
+IPMSG_GROUPREVSORTOPT	demo/ipmsg.h	167;"	d
+IPMSG_H	demo/ipmsg.h	12;"	d
+IPMSG_HOSTSORT	demo/ipmsg.h	162;"	d
+IPMSG_ICMPSORTOPT	demo/ipmsg.h	164;"	d
+IPMSG_IPADDRSORT	demo/ipmsg.h	161;"	d
+IPMSG_LISTGETRETRY_TIMER	demo/ipmsg.h	151;"	d
+IPMSG_LISTGET_TIMER	demo/ipmsg.h	150;"	d
+IPMSG_MULTICASTOPT	demo/ipmsg.h	69;"	d
+IPMSG_NAMESORT	demo/ipmsg.h	160;"	d
+IPMSG_NEWMUTIOPT	demo/ipmsg.h	75;"	d
+IPMSG_NICKNAME	demo/ipmsg.h	157;"	d
+IPMSG_NOADDLISTOPT	demo/ipmsg.h	76;"	d
+IPMSG_NOGROUPSORTOPT	demo/ipmsg.h	163;"	d
+IPMSG_NOKANJISORTOPT	demo/ipmsg.h	165;"	d
+IPMSG_NOLOGOPT	demo/ipmsg.h	74;"	d
+IPMSG_NOOPERATION	demo/ipmsg.h	26;"	d
+IPMSG_NOPOPUPOPT	demo/ipmsg.h	70;"	d
+IPMSG_OKGETLIST	demo/ipmsg.h	34;"	d
+IPMSG_PASSWORDOPT	demo/ipmsg.h	73;"	d
+IPMSG_RC2_128	demo/ipmsg.h	85;"	d
+IPMSG_RC2_128ALL	demo/ipmsg.h	96;"	d
+IPMSG_RC2_128OLD	demo/ipmsg.h	93;"	d
+IPMSG_RC2_256	demo/ipmsg.h	86;"	d
+IPMSG_RC2_40	demo/ipmsg.h	84;"	d
+IPMSG_RC2_40ALL	demo/ipmsg.h	95;"	d
+IPMSG_RC2_40OLD	demo/ipmsg.h	92;"	d
+IPMSG_READCHECKOPT	demo/ipmsg.h	77;"	d
+IPMSG_READMSG	demo/ipmsg.h	41;"	d
+IPMSG_RECVMSG	demo/ipmsg.h	40;"	d
+IPMSG_RECV_TIMER	demo/ipmsg.h	154;"	d
+IPMSG_RELEASEFILES	demo/ipmsg.h	52;"	d
+IPMSG_RETRYOPT	demo/ipmsg.h	72;"	d
+IPMSG_REVERSEICON	demo/ipmsg.h	143;"	d
+IPMSG_RSA_1024	demo/ipmsg.h	82;"	d
+IPMSG_RSA_2048	demo/ipmsg.h	83;"	d
+IPMSG_RSA_512	demo/ipmsg.h	81;"	d
+IPMSG_SECRETEXOPT	demo/ipmsg.h	78;"	d
+IPMSG_SECRETOPT	demo/ipmsg.h	67;"	d
+IPMSG_SENDABSENCEINFO	demo/ipmsg.h	49;"	d
+IPMSG_SENDCHECKOPT	demo/ipmsg.h	66;"	d
+IPMSG_SENDINFO	demo/ipmsg.h	46;"	d
+IPMSG_SENDMSG	demo/ipmsg.h	39;"	d
+IPMSG_SEND_TIMER	demo/ipmsg.h	149;"	d
+IPMSG_SERVEROPT	demo/ipmsg.h	60;"	d
+IPMSG_SIGN_MD5	demo/ipmsg.h	89;"	d
+IPMSG_SUBREVSORTOPT	demo/ipmsg.h	168;"	d
+IPMSG_TIMERINTERVAL	demo/ipmsg.h	144;"	d
+IPMSG_VERSION	demo/ipmsg.h	22;"	d
+main	demo/main.c	/^int main(int argc, char *argv[])$/;"	f
+IPMSG_OUT_MSG_COLOR	demo/myinclude.h	15;"	d
+_MYINCLUDE_H_	demo/myinclude.h	2;"	d
+CMD	demo/user_interface.c	/^}CMD;$/;"	t	typeref:struct:cmd	file:
+FUN	demo/user_interface.c	/^typedef void (*FUN)(int argc, char *argv[]);$/;"	t	file:
+clear_fun	demo/user_interface.c	/^void clear_fun(int argc, char *argv[])$/;"	f
+cmd	demo/user_interface.c	/^typedef struct cmd$/;"	s	file:
+cmdlist	demo/user_interface.c	/^CMD cmdlist[]={	$/;"	v
+exec_cmd	demo/user_interface.c	/^int exec_cmd(char *cmd)$/;"	f
+exit_fun	demo/user_interface.c	/^void exit_fun(int argc, char *argv[])$/;"	f
+fun	demo/user_interface.c	/^	FUN fun;		\/\/���������$/;"	m	struct:cmd	file:
+getfile_fun	demo/user_interface.c	/^void getfile_fun(int argc, char *argv[])$/;"	f
+help	demo/user_interface.c	/^char *help= "*********************************************************************************\\n"\\$/;"	v
+help_fun	demo/user_interface.c	/^void help_fun(int argc, char *argv[])$/;"	f
+list_fun	demo/user_interface.c	/^void list_fun(int argc, char *argv[])$/;"	f
+name	demo/user_interface.c	/^	char *name;		\/\/��������$/;"	m	struct:cmd	file:
+send_fun	demo/user_interface.c	/^void send_fun(int argc, char *argv[])$/;"	f
+user_interface	demo/user_interface.c	/^void *user_interface(void *arg)$/;"	f
+_USER_INTERFACE_H_	demo/user_interface.h	13;"	d
+add_user	demo/user_manager.c	/^void add_user(IPMSG_USER temp)$/;"	f
+del_user	demo/user_manager.c	/^void del_user(IPMSG_USER user)$/;"	f
+get_addr_by_name	demo/user_manager.c	/^int get_addr_by_name(char *name)$/;"	f
+head	demo/user_manager.c	/^static IPMSG_USER *head = NULL;$/;"	v	file:
+list	demo/user_manager.c	/^void list(void)$/;"	f
+IPMSG_USER	demo/user_manager.h	/^}IPMSG_USER;$/;"	t	typeref:struct:userlist
+_LIST_H_	demo/user_manager.h	13;"	d
+host	demo/user_manager.h	/^	char host[20];	\/\/������$/;"	m	struct:userlist
+name	demo/user_manager.h	/^	char name[20];	\/\/�û���$/;"	m	struct:userlist
+next	demo/user_manager.h	/^	struct userlist *next;$/;"	m	struct:userlist	typeref:struct:userlist::userlist
+s_addr	demo/user_manager.h	/^	int s_addr;		\/\/IP��ַ(32λ�����ֽ���)$/;"	m	struct:userlist
+userlist	demo/user_manager.h	/^typedef struct userlist$/;"	s
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
